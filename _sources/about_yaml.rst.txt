@@ -3,10 +3,10 @@ Learn YAML
 
 yaml ? 
 *******
-YAML stands for Yet Another Markup Language at origin.  
-Now it stands for _YAML Aint Markup Language_.   
-It can be used for configuration like xml, json ...  
-It is humal readable data serialization standard.  
+| YAML stands for Yet Another Markup Language at origin.  
+| Now it stands for YAML Aint Markup Language.   
+| It can be used for configuration like xml, json ...  
+| It is humal readable data serialization standard.  
 
 Configuration file can have
  - input(source) output(build) location
@@ -26,22 +26,20 @@ Syntax -good to know to write yaml code, easy to write and read!
 - windows_path: c:\windows == "c:\windows"
 - :  : mapping 
 - list:  
-    - - a  
-    - - b  
-    - - c  
-
+   - \- a  
+   - \- b  
+   - \- c  
 
 example of docs/config.yml
 *********************************
-.. example-code::
-  .. code-block:: yaml
+
+.. code-block:: yaml
   
     files:
       input_location: '../data/raw/data.csv'
       output_location: '../data/output/' == "../data/output/" 
   
     writing_at_run: True
-
 
 how to read yaml in python code?  
 *********************************

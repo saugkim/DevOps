@@ -167,10 +167,12 @@
 <h1>Learn YAML<a class="headerlink" href="#learn-yaml" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="yaml">
 <h2>yaml ?<a class="headerlink" href="#yaml" title="Permalink to this headline">¶</a></h2>
-<p>YAML stands for Yet Another Markup Language at origin.
-Now it stands for _YAML Aint Markup <a href="#id1"><span class="problematic" id="id2">Language_</span></a>.
-It can be used for configuration like xml, json …
-It is humal readable data serialization standard.</p>
+<div class="line-block">
+<div class="line">YAML stands for Yet Another Markup Language at origin.</div>
+<div class="line">Now it stands for YAML Aint Markup Language.</div>
+<div class="line">It can be used for configuration like xml, json …</div>
+<div class="line">It is humal readable data serialization standard.</div>
+</div>
 <dl class="simple">
 <dt>Configuration file can have</dt><dd><ul class="simple">
 <li><p>input(source) output(build) location</p></li>
@@ -194,18 +196,9 @@ It is humal readable data serialization standard.</p>
 <li><p>:  : mapping</p></li>
 <li><dl class="simple">
 <dt>list:</dt><dd><ul>
-<li><ul>
-<li><p>a</p></li>
-</ul>
-</li>
-<li><ul>
-<li><p>b</p></li>
-</ul>
-</li>
-<li><ul>
-<li><p>c</p></li>
-</ul>
-</li>
+<li><p>- a</p></li>
+<li><p>- b</p></li>
+<li><p>- c</p></li>
 </ul>
 </dd>
 </dl>
@@ -214,6 +207,13 @@ It is humal readable data serialization standard.</p>
 </div>
 <div class="section" id="example-of-docs-config-yml">
 <h2>example of docs/config.yml<a class="headerlink" href="#example-of-docs-config-yml" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">files</span><span class="p">:</span>
+  <span class="nt">input_location</span><span class="p">:</span> <span class="s">&#39;../data/raw/data.csv&#39;</span>
+  <span class="nt">output_location</span><span class="p">:</span> <span class="s">&#39;../data/output/&#39;</span> <span class="l l-Scalar l-Scalar-Plain">== &quot;../data/output/&quot;</span>
+
+<span class="nt">writing_at_run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="how-to-read-yaml-in-python-code">
 <h2>how to read yaml in python code?<a class="headerlink" href="#how-to-read-yaml-in-python-code" title="Permalink to this headline">¶</a></h2>
