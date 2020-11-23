@@ -24,28 +24,25 @@ Syntax -good to know to write yaml code, easy to write and read!
 - indentation: 2, 4 spaces, and what about tab(?)
 - version: "1.0" (Better use as string, not double)
 - windows_path: c:\windows == "c:\windows"
-- `: ` : mapping 
+- :  : mapping 
 - list:  
-   \- a  
-   \- b  
-   \- c  
+    - - a  
+    - - b  
+    - - c  
 
 
 example of docs/config.yml
 *********************************
-.. example-code::
-  .. code-block:: yaml
+.. code-block:: yaml
     files:
       input_location: '../data/raw/data.csv'
       output_location: '../data/output/' == "../data/output/" 
   
     writing_at_run: True
 
-
 how to read yaml in python code?  
 *********************************
-.. example-code::
-  .. code-block:: python
+.. code-block:: python
     import yaml
     with open('docs/config.yml', 'r') as f:
       config = yaml.safe_load(f)
@@ -59,8 +56,8 @@ how to read yaml in python code?
       dataframe.to_csv(path)
 
 
-
-#### YAML systax for workflows in GitHub 
+YAML systax for workflows in GitHub 
+*************************************
 - file extension: .yml or .yaml
 - file location: .github/workflow/yaml_file_here in repository
 
@@ -80,59 +77,58 @@ how to read yaml in python code?
      - jobs.<job_id>.steps.env
      - jobs.<job_id>.services
 
-.. example-code::
-  .. code-block:: yaml
-name: My workflow
 
-on: [push, pull_request]
+.. code-block:: yaml
+  name: My workflow
+
+  on: [push, pull_request]
  
-defaults:
-  run:
-    shell: bash
-    working-directory: scripts
+  defaults:
+    run:
+      shell: bash
+      working-directory: scripts
     
-jobs:
-  my_deploy: # user specific
-    name: my job
-    runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 4
-      matrix:
-        python-version: [3.7]
-    steps:
-      - name: My first step
-        uses: actions/aws/ec2@main
-        with:
-          first_name: Mona
-          middle_name: The
-          last_name: Octocat
-      - name: Check out repository
-        uses: actions/checkout@v2
-      - name: Use local my-action
-        uses: ./.github/actions/my-action
-      - name: My first step
-        uses: docker://alpine:3.8
-      - name: Clean temp directory
-        run: rm -rf *
-        working-directory: ./temp
-      - name: Install Dependencies
-        run: npm install
-      - name: Clean install dependencies and build
-        run: |
-          npm ci
-          npm run build
-    steps:
-      - name: Run a custom command
-        uses: monacorp/action-name@main
-        with:
-          entrypoint: /a/different/executable
-    steps:
-      - name: My first action
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FIRST_NAME: Mona
-          LAST_NAME: Octocat    
-
+  jobs:
+    my_deploy: # user specific
+      name: my job
+      runs-on: ubuntu-latest
+      strategy:
+        max-parallel: 4
+        matrix:
+          python-version: [3.7]
+      steps:
+        - name: My first step
+          uses: actions/aws/ec2@main
+          with:
+            first_name: Mona
+            middle_name: The
+            last_name: Octocat
+        - name: Check out repository
+          uses: actions/checkout@v2
+        - name: Use local my-action
+          uses: ./.github/actions/my-action
+        - name: My first step
+          uses: docker://alpine:3.8
+        - name: Clean temp directory
+          run: rm -rf *
+          working-directory: ./temp
+        - name: Install Dependencies
+          run: npm install
+        - name: Clean install dependencies and build
+          run: |
+            npm ci
+            npm run build
+      steps:
+        - name: Run a custom command
+          uses: monacorp/action-name@main
+          with:
+            entrypoint: /a/different/executable
+      steps:
+        - name: My first action
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            FIRST_NAME: Mona
+            LAST_NAME: Octocat    
 
 
 Example using a public action in a subdirectory  
@@ -142,4 +138,4 @@ Example using a Docker public registry action
 docker://{host}/{image}:{tag}  
 
 
-[example of my sphinx website configuration yml file](https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml)
+example of my sphinx website configuration yml file  https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml)
