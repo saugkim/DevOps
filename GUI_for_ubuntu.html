@@ -171,13 +171,14 @@
 </div>
 <div class="section" id="installing-wsl-with-gui-using-vcxsrv">
 <h2>Installing WSL with GUI using VcXsrv<a class="headerlink" href="#installing-wsl-with-gui-using-vcxsrv" title="Permalink to this headline">¶</a></h2>
-<p>Windows Subsystem for Linux is a feature in Windows 10 where you can install and run Linux applications on Windows 10. Though keep in mind …
-[Dhanar Santika blog](<a class="reference external" href="https://medium.com/&#64;dhanar.santika/installing-wsl-with-gui-using-vcxsrv-6f307e96fac0">https://medium.com/&#64;dhanar.santika/installing-wsl-with-gui-using-vcxsrv-6f307e96fac0</a>)</p>
+<p>Windows Subsystem for Linux is a feature in Windows 10 where you can install and run Linux applications on Windows 10. Though keep in mind … Dhanar Santika blog <a class="reference external" href="https://medium.com/&#64;dhanar.santika/installing-wsl-with-gui-using-vcxsrv-6f307e96fac0">https://medium.com/&#64;dhanar.santika/installing-wsl-with-gui-using-vcxsrv-6f307e96fac0</a></p>
 </div>
 <div class="section" id="download-vcxsrv">
 <h2>Download VcXsrv<a class="headerlink" href="#download-vcxsrv" title="Permalink to this headline">¶</a></h2>
-<p>VcXsrv is a Windows X-server based on the xorg git sources.
-<a class="reference external" href="https://sourceforge.net/projects/vcxsrv/">https://sourceforge.net/projects/vcxsrv/</a></p>
+<div class="line-block">
+<div class="line">VcXsrv is a Windows X-server based on the xorg git sources.</div>
+<div class="line"><a class="reference external" href="https://sourceforge.net/projects/vcxsrv/">https://sourceforge.net/projects/vcxsrv/</a></div>
+</div>
 </div>
 <div class="section" id="xlaunch-and-setup">
 <h2>XLaunch and setup<a class="headerlink" href="#xlaunch-and-setup" title="Permalink to this headline">¶</a></h2>
@@ -188,7 +189,9 @@
 <li><p>check Disable access control.</p></li>
 </ul>
 </div></blockquote>
-<p>blank screen will appear. close or keep open.</p>
+<div class="line-block">
+<div class="line">blank screen will appear. close or keep open.</div>
+</div>
 </div>
 <div class="section" id="install-desktop-environment-for-wsl">
 <h2>install Desktop Environment for WSL<a class="headerlink" href="#install-desktop-environment-for-wsl" title="Permalink to this headline">¶</a></h2>
@@ -197,19 +200,25 @@
 <li><p>XFCE4, KDE, GNOME, LXDE, Cinnamon, MATE, etc.</p></li>
 </ul>
 </div></blockquote>
-<p>In ubuntu WSL
-~~~
-$ sudo apt-get install xfce4
-$ echo ‘export DISPLAY=:0.0’ &gt;&gt; ~/.bashrc
-~~~
-Exit and re-run ubuntu and start!
-~~~
-$ startxfce4
-~~~</p>
-<p>In Bash, open Windows File Explorer:
-~~~
-explorer.exe .
-~~~</p>
+<div class="line-block">
+<div class="line">In ubuntu WSL</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install xfce4
+$ <span class="nb">echo</span> <span class="s1">&#39;export DISPLAY=:0.0&#39;</span> &gt;&gt; ~/.bashrc
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Exit and re-run ubuntu and start!</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ startxfce4
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">In Bash, open Windows File Explorer:</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>explorer.exe .
+</pre></div>
+</div>
 </div>
 </div>
 
