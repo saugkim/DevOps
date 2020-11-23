@@ -23,7 +23,15 @@ GIT basic of the basic
 | git push origin --delete remoteBranchName  
 | 
 | // delete file and folder in remote
-|
+| git rm file
+| git rm -r folder
+| git commit -m 'message'
+| git push -u origin main
+| 
+| //If you want to delete a file from remote only
+| git rm --cached file
+| git commit -m 'message'
+| git push -u origin branch
 |
 
 | https://readthedocs.org/projects/sphinx/downloads/pdf/master/
