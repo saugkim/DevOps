@@ -33,7 +33,8 @@ Syntax -good to know to write yaml code, easy to write and read!
 
 example of docs/config.yml
 *********************************
-.. code-block:: yaml
+.. example-code::
+  .. code-block:: yaml
     files:
       input_location: '../data/raw/data.csv'
       output_location: '../data/output/' == "../data/output/" 
@@ -42,7 +43,8 @@ example of docs/config.yml
 
 how to read yaml in python code?  
 *********************************
-.. code-block:: python
+.. example-code:: 
+  .. code-block:: python
     import yaml
     with open('docs/config.yml', 'r') as f:
       config = yaml.safe_load(f)
@@ -77,7 +79,7 @@ YAML systax for workflows in GitHub
      - jobs.<job_id>.steps.env
      - jobs.<job_id>.services
 
-
+.. example-code::
 .. code-block:: yaml
   name: My workflow
 
