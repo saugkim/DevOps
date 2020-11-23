@@ -7,10 +7,10 @@ DevOps Aalto
    :maxdepth: 2
    :hidden:
    
-   about_course.rst
-   learning_devops.rst
-   about_yaml.rst
-   GUI_for_ubuntu.rst
+   Content/about_course.rst
+   Content/learning_devops.rst
+   Content/about_yaml.rst
+   Content/GUI_for_ubuntu.rst
 
 
 About this page
