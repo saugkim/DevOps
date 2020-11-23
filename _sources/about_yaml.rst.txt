@@ -143,4 +143,4 @@ YAML systax for workflows in GitHub
 
 | this pages workflow config file https://github.com/saugkim/DevOps/blob/main/.github/workflows/sphinx-build.yml
 
-.. include:: .github/workflow/sphinx-build.yml
+.. include:: /.github/workflow/sphinx-build.yml
