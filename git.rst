@@ -1,6 +1,6 @@
 GIT basic of the basic
 
-bit confusing between main and master(after github main branch)
+| bit confusing between main and master(after github main branch)
 | echo "# sphinx" >> README.md  
 | git init  
 | git add README.md  
@@ -11,17 +11,17 @@ bit confusing between main and master(after github main branch)
 
 | git push -u origin main  
 
-
+| 
 | // add and remove remote repo  
 | git remote add origin  
 | git remote rm origin  
-
+| 
 | // delete branch locally  
 | git branch -d localBranchName  
-
+| 
 | // delete branch remotely  
 | git push origin --delete remoteBranchName  
-
+| 
 | // delete file and folder in remote
 |
 |
