@@ -1,6 +1,6 @@
 .. Test project documentation master file, created by sphinx-quickstart 
 
-About DevOps
+DevOps Aalto
 ==============
 
 .. toctree::
