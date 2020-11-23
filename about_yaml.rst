@@ -35,16 +35,19 @@ example of docs/config.yml
 *********************************
 .. example-code::
   .. code-block:: yaml
+  
     files:
       input_location: '../data/raw/data.csv'
       output_location: '../data/output/' == "../data/output/" 
   
     writing_at_run: True
 
+
 how to read yaml in python code?  
 *********************************
 .. example-code:: 
   .. code-block:: python
+
     import yaml
     with open('docs/config.yml', 'r') as f:
       config = yaml.safe_load(f)
