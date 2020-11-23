@@ -43,8 +43,8 @@ example of docs/config.yml
 
 how to read yaml in python code?  
 *********************************
-.. example-code:: 
-  .. code-block:: python
+
+.. code-block:: python
 
     import yaml
     with open('docs/config.yml', 'r') as f:
@@ -80,8 +80,8 @@ YAML systax for workflows in GitHub
      - jobs.<job_id>.steps.env
      - jobs.<job_id>.services
 
-.. example-code::
 .. code-block:: yaml
+
   name: My workflow
 
   on: [push, pull_request]
@@ -134,11 +134,11 @@ YAML systax for workflows in GitHub
             LAST_NAME: Octocat    
 
 
-Example using a public action in a subdirectory  
-{owner}/{repo}/{path}@{ref}  
+| Example using a public action in a subdirectory  
+| {owner}/{repo}/{path}@{ref}  
 
-Example using a Docker public registry action  
-docker://{host}/{image}:{tag}  
+| Example using a Docker public registry action  
+| docker://{host}/{image}:{tag}  
 
 
-example of my sphinx website configuration yml file  https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml)
+example of my sphinx website configuration yml file | https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml)

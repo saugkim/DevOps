@@ -217,6 +217,19 @@
 </div>
 <div class="section" id="how-to-read-yaml-in-python-code">
 <h2>how to read yaml in python code?<a class="headerlink" href="#how-to-read-yaml-in-python-code" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yaml</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;docs/config.yml&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+  <span class="n">config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="n">location_input</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;files&#39;</span><span class="p">][</span><span class="s1">&#39;input_location&#39;</span><span class="p">]</span>
+<span class="n">location_output</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;files&#39;</span><span class="p">][</span><span class="s1">&#39;output_location&#39;</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;writing_at_run&#39;</span><span class="p">]:</span>
+  <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;result_model1.txt&#39;</span>
+  <span class="n">path</span> <span class="o">=</span> <span class="n">location_output</span> <span class="o">+</span> <span class="n">filename</span>
+  <span class="n">dataframe</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="yaml-systax-for-workflows-in-github">
 <h2>YAML systax for workflows in GitHub<a class="headerlink" href="#yaml-systax-for-workflows-in-github" title="Permalink to this headline">¶</a></h2>
@@ -244,11 +257,67 @@
 </dl>
 </li>
 </ul>
-<p>Example using a public action in a subdirectory
-<a class="reference external" href="mailto:{owner}/{repo}/{path}&#37;&#52;&#48;{ref">{owner}/{repo}/{path}<span>&#64;</span>{ref</a>}</p>
-<p>Example using a Docker public registry action
-docker://{host}/{image}:{tag}</p>
-<p>example of my sphinx website configuration yml file  <a class="reference external" href="https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml">https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml</a>)</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My workflow</span>
+
+<span class="nt">on</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span> <span class="nv">pull_request</span><span class="p p-Indicator">]</span>
+
+<span class="nt">defaults</span><span class="p">:</span>
+  <span class="nt">run</span><span class="p">:</span>
+    <span class="nt">shell</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bash</span>
+    <span class="nt">working-directory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">scripts</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+  <span class="nt">my_deploy</span><span class="p">:</span> <span class="c1"># user specific</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my job</span>
+    <span class="nt">runs-on</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+    <span class="nt">strategy</span><span class="p">:</span>
+      <span class="nt">max-parallel</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+      <span class="nt">matrix</span><span class="p">:</span>
+        <span class="nt">python-version</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">3.7</span><span class="p p-Indicator">]</span>
+    <span class="nt">steps</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My first step</span>
+        <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/aws/ec2@main</span>
+        <span class="nt">with</span><span class="p">:</span>
+          <span class="nt">first_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Mona</span>
+          <span class="nt">middle_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The</span>
+          <span class="nt">last_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Octocat</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Check out repository</span>
+        <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Use local my-action</span>
+        <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./.github/actions/my-action</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My first step</span>
+        <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker://alpine:3.8</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Clean temp directory</span>
+        <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rm -rf *</span>
+        <span class="nt">working-directory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./temp</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Install Dependencies</span>
+        <span class="nt">run</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">npm install</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Clean install dependencies and build</span>
+        <span class="nt">run</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+          <span class="no">npm ci</span>
+          <span class="no">npm run build</span>
+    <span class="nt">steps</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Run a custom command</span>
+        <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">monacorp/action-name@main</span>
+        <span class="nt">with</span><span class="p">:</span>
+          <span class="nt">entrypoint</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/a/different/executable</span>
+    <span class="nt">steps</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My first action</span>
+        <span class="nt">env</span><span class="p">:</span>
+          <span class="nt">GITHUB_TOKEN</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+          <span class="nt">FIRST_NAME</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Mona</span>
+          <span class="nt">LAST_NAME</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Octocat</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Example using a public action in a subdirectory</div>
+<div class="line"><a class="reference external" href="mailto:{owner}/{repo}/{path}&#37;&#52;&#48;{ref">{owner}/{repo}/{path}<span>&#64;</span>{ref</a>}</div>
+</div>
+<div class="line-block">
+<div class="line">Example using a Docker public registry action</div>
+<div class="line">docker://{host}/{image}:{tag}</div>
+</div>
+<p>example of my sphinx website configuration yml file | <a class="reference external" href="https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml">https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml</a>)</p>
 </div>
 </div>
 
