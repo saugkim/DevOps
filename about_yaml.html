@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#syntax-good-to-know-to-write-yaml-code-easy-to-write-and-read">Syntax -good to know to write yaml code, easy to write and read!</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#example-of-docs-config-yml">example of docs/config.yml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-read-yaml-in-python-code">how to read yaml in python code?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#yaml-systax-for-workflows-in-github">YAML systax for workflows in GitHub</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="GUI_for_ubuntu.html">Set up GUI in Ubuntu LTS</a></li>
@@ -167,7 +168,7 @@
 <div class="section" id="yaml">
 <h2>yaml ?<a class="headerlink" href="#yaml" title="Permalink to this headline">¶</a></h2>
 <p>YAML stands for Yet Another Markup Language at origin.
-Now it stands for _YAML Aint Markup <a href="#id3"><span class="problematic" id="id4">Language_</span></a>.
+Now it stands for _YAML Aint Markup <a href="#id1"><span class="problematic" id="id2">Language_</span></a>.
 It can be used for configuration like xml, json …
 It is humal readable data serialization standard.</p>
 <dl class="simple">
@@ -190,11 +191,22 @@ It is humal readable data serialization standard.</p>
 <li><p>indentation: 2, 4 spaces, and what about tab(?)</p></li>
 <li><p>version: “1.0” (Better use as string, not double)</p></li>
 <li><p>windows_path: c:windows == “c:windows”</p></li>
-<li><p><a href="#id1"><span class="problematic" id="id2">`</span></a>: ` : mapping</p></li>
+<li><p>:  : mapping</p></li>
 <li><dl class="simple">
-<dt>list:</dt><dd><p>- a
-- b
-- c</p>
+<dt>list:</dt><dd><ul>
+<li><ul>
+<li><p>a</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p>b</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p>c</p></li>
+</ul>
+</li>
+</ul>
 </dd>
 </dl>
 </li>
@@ -205,10 +217,12 @@ It is humal readable data serialization standard.</p>
 </div>
 <div class="section" id="how-to-read-yaml-in-python-code">
 <h2>how to read yaml in python code?<a class="headerlink" href="#how-to-read-yaml-in-python-code" title="Permalink to this headline">¶</a></h2>
-<p>#### YAML systax for workflows in GitHub
-- file extension: .yml or .yaml
-- file location: .github/workflow/yaml_file_here in repository</p>
+</div>
+<div class="section" id="yaml-systax-for-workflows-in-github">
+<h2>YAML systax for workflows in GitHub<a class="headerlink" href="#yaml-systax-for-workflows-in-github" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p>file extension: .yml or .yaml</p></li>
+<li><p>file location: .github/workflow/yaml_file_here in repository</p></li>
 <li><p>name: name of workflow</p></li>
 <li><p>on: Required The name of the GitHub event that triggers the workflow.</p></li>
 <li><p>env:</p></li>
@@ -230,88 +244,11 @@ It is humal readable data serialization standard.</p>
 </dl>
 </li>
 </ul>
-<p>name: My workflow</p>
-<p>on: [push, pull_request]</p>
-<dl>
-<dt>defaults:</dt><dd><dl class="simple">
-<dt>run:</dt><dd><p>shell: bash
-working-directory: scripts</p>
-</dd>
-</dl>
-</dd>
-<dt>jobs:</dt><dd><dl>
-<dt>my_deploy: # user specific</dt><dd><p>name: my job
-runs-on: ubuntu-latest
-strategy:</p>
-<blockquote>
-<div><p>max-parallel: 4
-matrix:</p>
-<blockquote>
-<div><p>python-version: [3.7]</p>
-</div></blockquote>
-</div></blockquote>
-<dl>
-<dt>steps:</dt><dd><ul>
-<li><p>name: My first step
-uses: <a class="reference external" href="mailto:actions/aws/ec2&#37;&#52;&#48;main">actions/aws/ec2<span>&#64;</span>main</a>
-with:</p>
-<blockquote>
-<div><p>first_name: Mona
-middle_name: The
-last_name: Octocat</p>
-</div></blockquote>
-</li>
-<li><p>name: Check out repository
-uses: <a class="reference external" href="mailto:actions/checkout&#37;&#52;&#48;v2">actions/checkout<span>&#64;</span>v2</a></p></li>
-<li><p>name: Use local my-action
-uses: ./.github/actions/my-action</p></li>
-<li><p>name: My first step
-uses: docker://alpine:3.8</p></li>
-<li><p>name: Clean temp directory
-run: rm -rf *
-working-directory: ./temp</p></li>
-<li><p>name: Install Dependencies
-run: npm install</p></li>
-<li><p>name: Clean install dependencies and build
-run: |</p>
-<blockquote>
-<div><p>npm ci
-npm run build</p>
-</div></blockquote>
-</li>
-</ul>
-</dd>
-<dt>steps:</dt><dd><ul>
-<li><p>name: Run a custom command
-uses: <a class="reference external" href="mailto:monacorp/action-name&#37;&#52;&#48;main">monacorp/action-name<span>&#64;</span>main</a>
-with:</p>
-<blockquote>
-<div><p>entrypoint: /a/different/executable</p>
-</div></blockquote>
-</li>
-</ul>
-</dd>
-<dt>steps:</dt><dd><ul>
-<li><p>name: My first action
-env:</p>
-<blockquote>
-<div><p>GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-FIRST_NAME: Mona
-LAST_NAME: Octocat</p>
-</div></blockquote>
-</li>
-</ul>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd>
-</dl>
 <p>Example using a public action in a subdirectory
 <a class="reference external" href="mailto:{owner}/{repo}/{path}&#37;&#52;&#48;{ref">{owner}/{repo}/{path}<span>&#64;</span>{ref</a>}</p>
 <p>Example using a Docker public registry action
 docker://{host}/{image}:{tag}</p>
-<p>[example of my sphinx website configuration yml file](<a class="reference external" href="https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml">https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml</a>)</p>
+<p>example of my sphinx website configuration yml file  <a class="reference external" href="https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml">https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml</a>)</p>
 </div>
 </div>
 
