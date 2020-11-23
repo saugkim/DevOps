@@ -136,9 +136,9 @@ YAML systax for workflows in GitHub
 
 | Example using a public action in a subdirectory  
 | {owner}/{repo}/{path}@{ref}  
-
+| 
 | Example using a Docker public registry action  
 | docker://{host}/{image}:{tag}  
+| 
 
-
-example of my sphinx website configuration yml file | https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml)
+| example of my sphinx website configuration yml file https://github.com/saugkim/sphinx_action/blob/main/.github/workflows/sphinx-build.yml
