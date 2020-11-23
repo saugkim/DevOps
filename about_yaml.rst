@@ -31,29 +31,33 @@ Syntax -good to know to write yaml code, easy to write and read!
    \- c  
 
 
-#### example of docs/config.yml  
-~~~
-files:
-  input_location: '../data/raw/data.csv'
-  output_location: '../data/output/' == "../data/output/" 
+example of docs/config.yml
+*********************************
+.. example-code::
+  .. code-block:: yaml
+    files:
+      input_location: '../data/raw/data.csv'
+      output_location: '../data/output/' == "../data/output/" 
   
-writing_at_run: True
-~~~
+    writing_at_run: True
 
-#### how to read yaml in python code?  
-~~~
-import yaml
-with open('docs/config.yml', 'r') as f:
-  config = yaml.safe_load(f)
 
-location_input = config['files']['input_location']
-location_output = config['files']['output_location']
+how to read yaml in python code?  
+*********************************
+.. example-code::
+  .. code-block:: python
+    import yaml
+    with open('docs/config.yml', 'r') as f:
+      config = yaml.safe_load(f)
 
-if config['writing_at_run']:
-  filename = 'result_model1.txt'
-  path = location_output + filename
-  dataframe.to_csv(path)
-~~~
+    location_input = config['files']['input_location']
+    location_output = config['files']['output_location']
+
+    if config['writing_at_run']:
+      filename = 'result_model1.txt'
+      path = location_output + filename
+      dataframe.to_csv(path)
+
 
 
 #### YAML systax for workflows in GitHub 
@@ -75,7 +79,9 @@ if config['writing_at_run']:
      - jobs.<job_id>.steps.with.entrypoint
      - jobs.<job_id>.steps.env
      - jobs.<job_id>.services
-~~~
+
+.. example-code::
+  .. code-block:: yaml
 name: My workflow
 
 on: [push, pull_request]
@@ -126,7 +132,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FIRST_NAME: Mona
           LAST_NAME: Octocat    
-~~~
+
+
 
 Example using a public action in a subdirectory  
 {owner}/{repo}/{path}@{ref}  
