@@ -92,6 +92,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Learn YAML</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#yaml">yaml ?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#syntax-good-to-know-to-write-yaml-code-easy-to-write-and-read">Syntax -good to know to write yaml code, easy to write and read!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-of-docs-config-yml">example of docs/config.yml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-read-yaml-in-python-code">how to read yaml in python code?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="GUI_for_ubuntu.html">Set up GUI in Ubuntu LTS</a></li>
@@ -197,31 +199,12 @@ It is humal readable data serialization standard.</p>
 </dl>
 </li>
 </ul>
-<p>#### example of docs/config.yml
-~~~
-files:</p>
-<blockquote>
-<div><p>input_location: ‘../data/raw/data.csv’
-output_location: ‘../data/output/’ == “../data/output/”</p>
-</div></blockquote>
-<p>writing_at_run: True
-~~~</p>
-<p>#### how to read yaml in python code?
-~~~
-import yaml
-with open(‘docs/config.yml’, ‘r’) as f:</p>
-<blockquote>
-<div><p>config = yaml.safe_load(f)</p>
-</div></blockquote>
-<p>location_input = config[‘files’][‘input_location’]
-location_output = config[‘files’][‘output_location’]</p>
-<dl class="simple">
-<dt>if config[‘writing_at_run’]:</dt><dd><p>filename = ‘result_model1.txt’
-path = location_output + filename
-dataframe.to_csv(path)</p>
-</dd>
-</dl>
-<p>~~~</p>
+</div>
+<div class="section" id="example-of-docs-config-yml">
+<h2>example of docs/config.yml<a class="headerlink" href="#example-of-docs-config-yml" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="how-to-read-yaml-in-python-code">
+<h2>how to read yaml in python code?<a class="headerlink" href="#how-to-read-yaml-in-python-code" title="Permalink to this headline">¶</a></h2>
 <p>#### YAML systax for workflows in GitHub
 - file extension: .yml or .yaml
 - file location: .github/workflow/yaml_file_here in repository</p>
@@ -247,8 +230,7 @@ dataframe.to_csv(path)</p>
 </dl>
 </li>
 </ul>
-<p>~~~
-name: My workflow</p>
+<p>name: My workflow</p>
 <p>on: [push, pull_request]</p>
 <dl>
 <dt>defaults:</dt><dd><dl class="simple">
@@ -325,7 +307,6 @@ LAST_NAME: Octocat</p>
 </dl>
 </dd>
 </dl>
-<p>~~~</p>
 <p>Example using a public action in a subdirectory
 <a class="reference external" href="mailto:{owner}/{repo}/{path}&#37;&#52;&#48;{ref">{owner}/{repo}/{path}<span>&#64;</span>{ref</a>}</p>
 <p>Example using a Docker public registry action
