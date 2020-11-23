@@ -141,6 +141,6 @@ YAML systax for workflows in GitHub
 | docker://{host}/{image}:{tag}  
 | 
 
-| this pages yml file https://github.com/saugkim/DevOps/blob/main/.github/workflows/sphinx-build.yml
+| this pages workflow config file https://github.com/saugkim/DevOps/blob/main/.github/workflows/sphinx-build.yml
 
-.. code-block:: .github/workflow/sphinx-build.yml
+.. include:: .github/workflow/sphinx-build.yml
