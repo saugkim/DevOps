@@ -18,11 +18,16 @@ Workflow, Sphinx, GitHub Actions
 .. |GitHub Actions| image:: https://img.shields.io/badge/GitHub-Actions-blue.svg
    :target: https://docs.github.com/en/free-pro-team@latest/actions
 
+
+|**Example of badge**
+|https://img.shields.io/badge/Left-Right-red.svg
+
+
 .. code-block:: RST
+
+ |Left Right|
  
- |Sphinx build|
- 
- .. |Sphinx build| image:: https://img.shields.io/badge/Sphinx-build-green.svg
+ .. |Left Right| image:: https://img.shields.io/badge/Sphinx-build-green.svg
    :target: https://www.sphinx-doc.org/en/master/
 
 
