@@ -1,4 +1,4 @@
-|Website Kim's DevOps|   |Sphinx build|
+|Website Kim's DevOps|   |Sphinx build|  |GitHub Actions|
 
 **Continuous Deployment test**
 
@@ -15,7 +15,8 @@ Workflow, Sphinx, GitHub Actions
 .. |Sphinx build| image:: https://img.shields.io/badge/Sphinx-build-green.svg
    :target: https://www.sphinx-doc.org/en/master/
 
-
+.. |GitHub Actions| image:: https://img.shields.io/badge/GitHub-Actions-blue.svg
+   :target: https://docs.github.com/en/free-pro-team@latest/actions
 
 .. code-block:: RST
  
