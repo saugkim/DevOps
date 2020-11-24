@@ -21,7 +21,7 @@ Workflow, Sphinx, GitHub Actions
 
 | **Example of badge**
 | https://img.shields.io/badge/Left-Right-red.svg
-
+|Left Right|
 
 
 .. code-block:: RST
