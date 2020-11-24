@@ -1,6 +1,6 @@
-|Website Kim's DevOps|
+|Website Kim's DevOps|  |Sphinx build|
 
-.. |Website Kim's DevOps| image:: https://img.shields.io/badge/Website-up-green.svg
+.. |Website Kim's DevOps| image:: https://img.shields.io/badge/DevOps-up-green.svg
    :target: https://saugkim.github.io/DevOps/index.html
 
 
