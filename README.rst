@@ -1,4 +1,6 @@
-[Github Pages](https://saugkim.github.io/DevOps/index.html)
+https://saugkim.github.io/DevOps/index.html
+
+|Website Kim's DevOps|
 
 .. |Website Kim's DevOps| image:: https://img.shields.io/website-up-down-green-red/https/naereen.github.io.svg
    :target: https://saugkim.github.io/DevOps/index.html
