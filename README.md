@@ -1,5 +1,9 @@
 [Github Pages](https://saugkim.github.io/DevOps/index.html)
 
+.. |Website Kim's DevOps| image:: https://img.shields.io/website-up-down-green-red/https/naereen.github.io.svg
+   :target: https://saugkim.github.io/DevOps/index.html
+
+
 continuous deployment test 
 
 Aalto Course of CS-EJ4104 2020 about DevOops
