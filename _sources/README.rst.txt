@@ -20,16 +20,16 @@ Workflow, Sphinx, GitHub Actions
 
 
 | **Example of badge**
-| https://img.shields.io/badge/Left-Right-red.svg
 |Left Right|
 
 
 .. code-block:: RST
 
-  |Left Right|
- 
   .. |Left Right| image:: https://img.shields.io/badge/Left-Right-red.svg
-    :target: https://www.wheretogo.org
+    :target: https://img.shields.io/badge/Left-Right-red.svg
 
+
+.. |Left Right| image:: https://img.shields.io/badge/Left-Right-red.svg
+   :target: https://img.shields.io/badge/Left-Right-red.svg
 
 
