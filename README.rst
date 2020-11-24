@@ -2,7 +2,7 @@ https://saugkim.github.io/DevOps/index.html
 
 |Website Kim's DevOps|
 
-.. |Website Kim's DevOps| image:: https://img.shields.io/website-up-down-green-red/https/naereen.github.io.svg
+.. |Website Kim's DevOps| image:: image:: https://img.shields.io/badge/Website%3F-up-green.svg
    :target: https://saugkim.github.io/DevOps/index.html
 
 
