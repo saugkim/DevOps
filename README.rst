@@ -16,5 +16,15 @@ Workflow, Sphinx, GitHub Actions
    :target: https://www.sphinx-doc.org/en/master/
 
 
+.. code-block: rst
+ 
+ |Sphinx build|
+ 
+ .. |Sphinx build| image:: https://img.shields.io/badge/Sphinx-build-green.svg
+   :target: https://www.sphinx-doc.org/en/master/
+
+
+
+
 
 https://towardsdatascience.com/5-reasons-to-use-yaml-files-in-your-machine-learning-projects-d4c7b9650f27
