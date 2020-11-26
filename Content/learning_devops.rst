@@ -22,16 +22,26 @@ DevOpss is a collaboration between development, operations and other teams with 
 3. Culture of Experimentation: continual experimentation and learning failure
   - allocating time for improvement of daily work
   - rewards for taking risks
-  - introduce fault into system to increase resilience
+  - introduce fault into system to increase resilience, site switching?
   
-4. Principle of Kaizen
+4. Principle of Kaizen: 
+  - continuous improvement, getting better all the time
+  - systems thinking 
+  - quality
+  - process control
+  - minimal inventory
 
 
 CAMS model
 -----------
+
 | **Culture**
+- 
+
 | **Automation**
+
 | **Measurement**
+
 | **Sharing**  
 
 
