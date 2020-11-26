@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>$(VARIABLE_NAME) &mdash; DevOps  documentation</title>
+  <title>Learn Makefile &mdash; DevOps  documentation</title>
   
 
   
@@ -90,13 +90,16 @@
 <li class="toctree-l1"><a class="reference internal" href="learning_devops.html">Learning DevOps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="about_yaml.html">Learn YAML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="GUI_for_ubuntu.html">Set up GUI in Ubuntu LTS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">$(VARIABLE_NAME)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#echo">&#64;echo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#phony">.PHONY</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#id1">$&#64;: $&lt;</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#id2">$(0)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#sphinx-build-command">sphinx build command</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#makefile-sample-which-is-used-for-this-devops-project">Makefile sample (which is used for this DevOps project)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Learn Makefile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#variable-name">$(VARIABLE_NAME)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#echo">&#64;echo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#phony">.PHONY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">$&#64;: $&lt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">$(0)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx-build-command">sphinx build command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#makefile-sample-which-is-used-for-this-devops-project">Makefile sample (which is used for this DevOps project)</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -143,7 +146,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>$(VARIABLE_NAME)</li>
+      <li>Learn Makefile</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -162,8 +165,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="variable-name">
-<h1>$(VARIABLE_NAME)<a class="headerlink" href="#variable-name" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="learn-makefile">
+<h1>Learn Makefile<a class="headerlink" href="#learn-makefile" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="variable-name">
+<h2>$(VARIABLE_NAME)<a class="headerlink" href="#variable-name" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">VARIABLE = sphinx-build</div>
 <div class="line">use like this $(VARIABLE)</div>
@@ -171,7 +176,7 @@
 </div>
 </div>
 <div class="section" id="echo">
-<h1>&#64;echo<a class="headerlink" href="#echo" title="Permalink to this headline">¶</a></h1>
+<h2>&#64;echo<a class="headerlink" href="#echo" title="Permalink to this headline">¶</a></h2>
 <p>what is this &#64;? silence</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">target</span><span class="p">:</span> <span class="c1"># with @</span>
       <span class="nd">@echo</span> <span class="s2">&quot;Call gcc to generate $@&quot;</span>
@@ -185,7 +190,7 @@
 </div>
 </div>
 <div class="section" id="phony">
-<h1>.PHONY<a class="headerlink" href="#phony" title="Permalink to this headline">¶</a></h1>
+<h2>.PHONY<a class="headerlink" href="#phony" title="Permalink to this headline">¶</a></h2>
 <p>Adding .PHONY to a target will prevent make from confusing the phony target with a file name. In this example, if the file “clean” is created, <strong>make clean</strong> will still be run.</p>
 <div class="line-block">
 <div class="line">Without <em>.PHONY clean</em>, $ make clean: ‘clean’ is up to date  #there is ‘clean’ file</div>
@@ -199,7 +204,7 @@
 </div>
 </div>
 <div class="section" id="id1">
-<h1>$&#64;: $&lt;<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h2>$&#64;: $&lt;<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>automatic variable <em>$&#64;</em> matches the target name, <em>$&lt;</em> matches the prerequisite name</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">target</span><span class="p">:</span> <span class="n">prerequisite</span>
       <span class="nd">@echo</span> <span class="s2">&quot;Call gcc to generate $@ from $&lt;&quot;</span>
@@ -211,11 +216,11 @@
 </div>
 </div>
 <div class="section" id="id2">
-<h1>$(0)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<h2>$(0)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>in sphinx, $(0) is shortcut for $(SPHINXOPTS).</p>
 </div>
 <div class="section" id="sphinx-build-command">
-<h1>sphinx build command<a class="headerlink" href="#sphinx-build-command" title="Permalink to this headline">¶</a></h1>
+<h2>sphinx build command<a class="headerlink" href="#sphinx-build-command" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><em>sphinx-build -b buildername source_directory build_directory [filenames…]</em></div>
 <div class="line">default builder is html</div>
@@ -233,7 +238,7 @@ html: Makefile
 </ul>
 </div>
 <div class="section" id="makefile-sample-which-is-used-for-this-devops-project">
-<h1>Makefile sample (which is used for this DevOps project)<a class="headerlink" href="#makefile-sample-which-is-used-for-this-devops-project" title="Permalink to this headline">¶</a></h1>
+<h2>Makefile sample (which is used for this DevOps project)<a class="headerlink" href="#makefile-sample-which-is-used-for-this-devops-project" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Minimal makefile for Sphinx documentation
 # You can set these VARIABLES from the command line.
 SPHINXOPTS    =
@@ -257,6 +262,7 @@ help:
 </div>
 <div class="line-block">
 <div class="line"><a class="reference external" href="https://makefiletutorial.com/">https://makefiletutorial.com/</a></div>
+</div>
 </div>
 </div>
 
