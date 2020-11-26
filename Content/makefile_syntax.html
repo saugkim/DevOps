@@ -181,8 +181,16 @@
 </div>
 </div>
 <div class="section" id="id1">
-<h1>$&#64;<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>automatic variable that contains the target name.</p>
+<h1>$&#64;: $&lt;<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>automatic variable <em>$&#64;</em> matches the target name <em>$&lt;</em> matches the prerequite name</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">target</span><span class="p">:</span> <span class="n">prerequisite</span>
+      <span class="nd">@echo</span> <span class="s2">&quot;Call gcc to generate $@ from $&lt;&quot;</span>
+<span class="n">prerequisite</span><span class="p">:</span>
+      <span class="nd">@echo</span> <span class="s2">&quot;Do something&quot;</span>
+<span class="c1"># Do something</span>
+<span class="c1"># Call gcc to generate target from prerequisite</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id2">
 <h1>$(0)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
