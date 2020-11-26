@@ -94,6 +94,7 @@ what about continuous deployment? if all tests passed through the continuous del
 Without continuous delivery, no continuous deployment.
 |
 |
+
 Software Development Life Cycle of DepOvs 
 ------------------------------------------
 Traditional SDLC(software development life cycle) -many years without release, sit and wait, big batch of errors
