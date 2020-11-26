@@ -177,25 +177,25 @@
 16
 17
 18
-19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c">  # Minimal makefile for Sphinx documentation</span>
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c"># Minimal makefile for Sphinx documentation</span>
 
-<span class="c">  # You can set these variables from the command line.</span>
-  <span class="nv">SPHINXOPTS</span>    <span class="o">=</span>
-  <span class="nv">SPHINXBUILD</span>   <span class="o">=</span> sphinx-build
-  <span class="nv">SPHINXPROJ</span>    <span class="o">=</span> Testproject
-  <span class="nv">SOURCEDIR</span>     <span class="o">=</span> .
-  <span class="nv">BUILDDIR</span>      <span class="o">=</span> _build
+<span class="c"># You can set these variables from the command line.</span>
+<span class="nv">SPHINXOPTS</span>    <span class="o">=</span>
+<span class="nv">SPHINXBUILD</span>   <span class="o">=</span> sphinx-build
+<span class="nv">SPHINXPROJ</span>    <span class="o">=</span> Testproject
+<span class="nv">SOURCEDIR</span>     <span class="o">=</span> .
+<span class="nv">BUILDDIR</span>      <span class="o">=</span> _build
 
-<span class="c">  # Put it first so that &quot;make&quot; without argument is like &quot;make help&quot;.</span>
-  help:
-            @<span class="k">$(</span>SPHINXBUILD<span class="k">)</span> -M <span class="nb">help</span> <span class="s2">&quot;</span><span class="k">$(</span>SOURCEDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="k">$(</span>SPHINXOPTS<span class="k">)</span> <span class="k">$(</span>O<span class="k">)</span>
+<span class="c"># Put it first so that &quot;make&quot; without argument is like &quot;make help&quot;.</span>
+<span class="nf">help</span><span class="o">:</span>
+    @<span class="k">$(</span>SPHINXBUILD<span class="k">)</span> -M <span class="nb">help</span> <span class="s2">&quot;</span><span class="k">$(</span>SOURCEDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="k">$(</span>SPHINXOPTS<span class="k">)</span> <span class="k">$(</span>O<span class="k">)</span>
 
-  .PHONY: <span class="nb">help</span> Makefile
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="n">help</span> <span class="n">Makefile</span>
 
-<span class="c">  # Catch-all target: route all unknown targets to Sphinx using the new</span>
-<span class="c">  # &quot;make mode&quot; option.  $(O) is meant as a shortcut for $(SPHINXOPTS).</span>
-  %: Makefile
-            @<span class="k">$(</span>SPHINXBUILD<span class="k">)</span> -M <span class="nv">$@</span> <span class="s2">&quot;</span><span class="k">$(</span>SOURCEDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="k">$(</span>SPHINXOPTS<span class="k">)</span> <span class="k">$(</span>O<span class="k">)</span>
+<span class="c"># Catch-all target: route all unknown targets to Sphinx using the new</span>
+<span class="c"># &quot;make mode&quot; option.  $(O) is meant as a shortcut for $(SPHINXOPTS).</span>
+<span class="nf">%</span><span class="o">:</span> <span class="n">Makefilw</span>
+    @<span class="k">$(</span>SPHINXBUILD<span class="k">)</span> -M <span class="nv">$@</span> <span class="s2">&quot;</span><span class="k">$(</span>SOURCEDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="k">$(</span>BUILDDIR<span class="k">)</span><span class="s2">&quot;</span> <span class="k">$(</span>SPHINXOPTS<span class="k">)</span> <span class="k">$(</span>O<span class="k">)</span>
 </pre></div>
 </td></tr></table></div>
 
