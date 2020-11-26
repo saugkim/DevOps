@@ -3,11 +3,41 @@ Learn DevOps
 
 DevOps! What is it?
 ********************
-The blog post must include the following elements.
 
-A heading containing either of the following strings: "learned DevOps" or "learning DevOps".
+DevOpss is a collaboration between development, operations and other teams with the recognition that we are tasked with achieving common business goals.
 
-A few paragraphs or items in an unordered list immediately following the heading and  explaining something new that you learned with the course and which was the most (or least) challenging part of it. The related textual content should be between 250 and 500 words combined.
-Again, you are free to add other content as long as you have the two items above.
+How to achieve?
+1. Systems thinking: global optimization, faster as a whole
+  - no defect to downstream work centers
+  - no allow local optimizationi to create global degradation
+  - increase flow
+  
+2. Feedback loop: Amplify Feedback Loops, shorten  
+  - page load times
+  - measure throughput of work through the system
+  - building right thing?
+  - Metrics
+  - Postmortems/learning reviews
+    
+3. Culture of Experimentation
 
+
+4. Principle of Kaizen
+
+
+CAMS model
+-----------
+| **Culture**
+| **Automation**
+| **Measurement**
+| **Sharing**  
+
+
+Life Cycle of DevOps 
+--------------------
+
+
+
+Continuous Delivery
+---------------------
 
