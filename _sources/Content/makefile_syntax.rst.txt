@@ -37,7 +37,7 @@ Adding .PHONY to a target will prevent make from confusing the phony target with
 
 $@: $<
 **********
-automatic variable *$@* matches the target name *$<* matches the prerequite name
+automatic variable *$@* matches the target name, *$<* matches the prerequisite name
 
 .. code-block::
 
