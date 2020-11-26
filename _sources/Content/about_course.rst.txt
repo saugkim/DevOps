@@ -1,8 +1,8 @@
 Course CS-EJ4104
 ==================
 
-Course Overview and practiclities
-**********************************
+Course Overview and practicalities
+***********************************
 
 | **General overview**  
 This course provides an introduction to DevOps by covering both related technologies and software development practices. Additional information is available in the course syllabus. The course takes place entirely online and is mostly based on independent learning supported by both the provided material and the online modules.
