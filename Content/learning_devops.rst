@@ -84,10 +84,10 @@ what is continuous delivery (CD)? what is continuous deployment? is same?
 - everyone's reponsibility
 
 What CD systems looks like?
-- DO small amount of changes (Unit Tests), fast!
-- -> Integration Tests 
-- >> Security Tests, >> Test Env A, >> Test Env B
-everything went fine, humans can decide to push into production or not, but
+ - DO small amount of changes (Unit Tests), fast!
+ - -> Integration Tests 
+ - >> Security Tests, >> Test Env A, >> Test Env B
+| everything went fine, humans can decide to push into production or not, but
 
 Continuous deployment? if all tests passed through the continuous delivery pipelines, software automatically go into the production. Without continuous delivery, there is no continuous deployment.
 
