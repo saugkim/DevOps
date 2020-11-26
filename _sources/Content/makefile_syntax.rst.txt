@@ -1,14 +1,14 @@
-| https://makefiletutorial.com/
-| https://github.com/Kitware/CMake/blob/master/Help/dev/documentation.rst
-|
+.PHONY 
 
 Adding .PHONY to a target will prevent make from confusing the phony target with a file name. In this example, if the file “clean” is created, **make clean** will still be run. 
-| Without .PHONY clean, **make clean**: 'clean' is up to date.
 
-| touch clean
-| .PHONY clean
-| clean: 
-|        do something
+Without .PHONY clean, **make clean**: 'clean' is up to date.
+.. code-block::
+
+      touch clean
+      .PHONY clean
+      clean: 
+            do something
       
       
  - wildcards: *, ?, [...]
@@ -40,3 +40,6 @@ Adding .PHONY to a target will prevent make from confusing the phony target with
     %: Makefile
     	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
  
+| https://makefiletutorial.com/
+| https://github.com/Kitware/CMake/blob/master/Help/dev/documentation.rst
+|
