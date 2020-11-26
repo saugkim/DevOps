@@ -1,8 +1,8 @@
-Learning DevOps
+Learn DevOps
 ===================
 
-Learning DevOps
-*****************
+DevOps! What is it?
+********************
 The blog post must include the following elements.
 
 A heading containing either of the following strings: "learned DevOps" or "learning DevOps".
