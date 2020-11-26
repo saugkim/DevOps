@@ -89,9 +89,9 @@ What CD systems looks like?
  - >> Security Tests >> Test Env A >> Test Env B
 | everything went fine, humans can decide to push into production or not, but
 |
-Continuous deployment? if all tests passed through the continuous delivery pipelines, software automatically go into the production. 
+what about continuous deployment? if all tests passed through the continuous delivery pipelines, software automatically go into the production. 
 
-Without continuous delivery, there is no continuous deployment.
+Without continuous delivery, no continuous deployment.
 
 Life Cycle of DepOvs
 ---------------------
