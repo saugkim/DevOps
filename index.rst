@@ -11,6 +11,7 @@ DevOps Aalto
    Content/learning_devops.rst
    Content/about_yaml.rst
    Content/GUI_for_ubuntu.rst
+   Content/understand_makefile.rst
 
 
 About this page
