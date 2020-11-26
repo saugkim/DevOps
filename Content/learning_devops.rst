@@ -71,8 +71,8 @@ Cargo culting? no!!
 - documentation 
 - Brown bags/Tech talks/Internal conferences
 - ChatOps -log, history
-
-
+|
+|
 Continuous Delivery
 ---------------------
 what is continuous delivery (CD)? what is continuous deployment? is same?
@@ -88,11 +88,23 @@ What CD systems looks like?
  - Unit Tests -> Integration Tests -> 
  - >> Security Tests >> Test Env A >> Test Env B
 | everything went fine, humans can decide to push into production or not, but
-|
+
 what about continuous deployment? if all tests passed through the continuous delivery pipelines, software automatically go into the production. 
 
 Without continuous delivery, no continuous deployment.
+|
+|
+Software Development Life Cycle of DepOvs 
+------------------------------------------
+Traditional SDLC(software development life cycle) -many years without release, sit and wait, big batch of errors
 
-Life Cycle of DepOvs
----------------------
+| what about DepOvs SDLC? 
+| Plan -> Code -> Build -> Test -> Deploy -> Release -> Operate -> Monitor -> rePlan 
+
+
+
+
+
+
+
 
