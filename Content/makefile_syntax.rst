@@ -43,10 +43,10 @@ sphinx build command
 
 - wildcards: *, ?, [...]
 - %: which matches any zero or more characters
-- $@: automatic variable that contains the target name
-- @echo vs echo
 
 
+Makefile sample (which is used for this DevOps project)
+********************************************************
 .. code-block:: 
     
     # Minimal makefile for Sphinx documentation
