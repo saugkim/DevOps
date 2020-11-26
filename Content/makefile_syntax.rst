@@ -29,18 +29,21 @@ automatic variable that contains the target name.
 
 $(0) 
 *****
-in sphinx, $(0) is shortcut for $(SPHINXOPTS).
+| in sphinx, $(0) is shortcut for $(SPHINXOPTS).
+| sphinx-build -M buildername source_directory build_directory 
 
 .. code-block::
+      
       %: Makefile
     	      @$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
+
 - wildcards: *, ?, [...]
 - %: which matches any zero or more characters
-- $@: automatic variable that contains the target name.
-- "$(VARIALBE_NAME)"
+- $@: automatic variable that contains the target name
 - @echo vs echo
- 
+
+
 .. code-block:: 
     
     # Minimal makefile for Sphinx documentation
