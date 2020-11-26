@@ -47,20 +47,50 @@ Cargo culting? no!!
 
 | **Automation**
 - why automate? expensive, not scalable, more errors,  
-- 
+
+- infrastructure as code - configuration management
+- continuous delivery pipeline
+- Simian army (?)
+- Orchestration engine (?)
 
 | **Measurement**
-- 
+- why measure? metrics, monitoring, see data
+- what to measure? cost?, revenue? how many signed up? how many calls? ...
+
+- Instrumentation platform (Graphite, OpenTSDB ..)
+- Information radiators (?)
+- Process measurement (cycle time, MTTR, ...)
+
 
 | **Sharing**  
-- 
+- why sharing so important?
+- visibility(everybody can see) + transparency(why you did) + knowledge transfer
 
-
-Life Cycle of DevOps 
---------------------
-
+- daily standup
+- retrospectives 
+- documentation 
+- Brown bags/Tech talks/Internal conferences
+- ChatOps -log, history
 
 
 Continuous Delivery
+---------------------
+what is continuous delivery (CD)? what is continuous deployment? is same?
+
+- system should be automated/repeatable
+- run to the pain
+- version controlled
+- always deployable (working code)
+- everyone's reponsibility
+
+What CD systems looks like?
+- DO small amount of changes (Unit Tests), fast!
+- -> Integration Tests 
+- >> Security Tests, >> Test Env A, >> Test Env B
+everything went fine, humans can decide to push into production or not, but
+
+Continuous deployment? if all tests passed through the continuous delivery pipelines, software automatically go into the production. Without continuous delivery, there is no continuous deployment.
+
+Life Cycle of DepOvs
 ---------------------
 
