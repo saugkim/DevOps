@@ -47,7 +47,6 @@ Cargo culting? no!!
 
 | **Automation**
 - why automate? expensive, not scalable, more errors,  
-| 
 - infrastructure as code - configuration management
 - continuous delivery pipeline
 - Simian army (?)
@@ -56,7 +55,6 @@ Cargo culting? no!!
 | **Measurement**
 - why measure? metrics, monitoring, see data
 - what to measure? cost?, revenue? how many signed up? how many calls? ...
-| 
 - Instrumentation platform (Graphite, OpenTSDB ..)
 - Information radiators (?)
 - Process measurement (cycle time, MTTR, ...)
@@ -65,7 +63,6 @@ Cargo culting? no!!
 | **Sharing**  
 - why sharing so important?
 - visibility(everybody can see) + transparency(why you did) + knowledge transfer
-| 
 - daily standup
 - retrospectives 
 - documentation 
@@ -92,9 +89,9 @@ What CD systems looks like?
 
 what about continuous deployment? if all tests passed through the continuous delivery pipelines, software automatically go into the production. 
 
-Without continuous delivery, no continuous deployment.
-| 
-| 
+| Without continuous delivery, no continuous deployment.
+ 
+
 
 Software Development Life Cycle of DepOvs 
 ------------------------------------------
@@ -102,6 +99,4 @@ Traditional SDLC(software development life cycle) -many years without release, s
 
 | what about DepOvs SDLC? 
 | Plan -> Code -> Build -> Test -> Deploy -> Release -> Operate -> Monitor -> rePlan 
-
-
 
