@@ -1,8 +1,16 @@
-.PHONY 
+$(VARIABLE_NAME)
+*****************
+call variable, variable is only string
 
+@ 
+**
+what is this?
+
+.PHONY 
+*******
 Adding .PHONY to a target will prevent make from confusing the phony target with a file name. In this example, if the file “clean” is created, **make clean** will still be run. 
 
-Without *.PHONY clean*, $ make clean: 'clean' is up to date.
+Without *.PHONY clean*, $ make clean: 'clean' is up to date not *do something*
 
 .. code-block::
 
@@ -10,19 +18,27 @@ Without *.PHONY clean*, $ make clean: 'clean' is up to date.
       .PHONY clean
       clean: 
             do something
-      
-      
- - wildcards: *, ?, [...]
- - %: which matches any zero or more characters
- - $@: automatic variable that contains the target name.
- - "$(VARIALBE_NAME)"
- - @echo vs echo
- - 
+
+
+$@
+***
+automatic variable that contains the target name.
+
+$(0) 
+****
+in sphinx, $(0) is $(SPHINXOPTS)
+
+
+- wildcards: *, ?, [...]
+- %: which matches any zero or more characters
+- $@: automatic variable that contains the target name.
+- "$(VARIALBE_NAME)"
+- @echo vs echo
+ 
 .. code-block:: 
     
     # Minimal makefile for Sphinx documentation
-
-    # You can set these variables from the command line.
+    # You can set these VARIABLES from the command line.
     SPHINXOPTS    =
     SPHINXBUILD   = sphinx-build
     SPHINXPROJ    = Testproject
