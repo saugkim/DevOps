@@ -165,7 +165,10 @@
 <div class="section" id="phony">
 <h1>.PHONY<a class="headerlink" href="#phony" title="Permalink to this headline">¶</a></h1>
 <p>Adding .PHONY to a target will prevent make from confusing the phony target with a file name. In this example, if the file “clean” is created, <strong>make clean</strong> will still be run.</p>
-<p>Without <em>.PHONY clean</em>, $ make clean: ‘clean’ is up to date not <em>do something</em></p>
+<div class="line-block">
+<div class="line">Without <em>.PHONY clean</em>, $ make clean: ‘clean’ is up to date  #there is ‘clean’ file</div>
+<div class="line">With <em>.PHONY clean</em>, $ make-clean: do something</div>
+</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">touch</span> <span class="n">clean</span>
 <span class="o">.</span><span class="n">PHONY</span> <span class="n">clean</span>
 <span class="n">clean</span><span class="p">:</span>
