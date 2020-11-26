@@ -43,7 +43,9 @@ in sphinx, $(0) is shortcut for $(SPHINXOPTS).
 
 sphinx build command
 *********************
-*sphinx-build -M buildername source_directory build_directory*
+| *sphinx-build -b buildername source_directory build_directory [filenames...]*
+| default builder is html (lots more)
+| -M: alternative to -b. Uses the Sphinx make_mode module. default html
 
 .. code-block::
       
