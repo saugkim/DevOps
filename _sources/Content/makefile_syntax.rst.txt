@@ -3,13 +3,20 @@
 |
 
 Adding .PHONY to a target will prevent make from confusing the phony target with a file name. In this example, if the file “clean” is created, **make clean** will still be run. 
-Without .PHONY clean, **make clean** 'clean' is up to date.
+Without .PHONY clean, **make clean**: 'clean' is up to date.
 
 | touch clean
 | .PHONY clean
 | clean: 
-|    do something
-
+      do something
+      
+      
+ - wildcards: *, ?, [...]
+ - %: which matches any zero or more characters
+ - $@: automatic variable that contains the target name.
+ - "$(VARIALBE_NAME)"
+ - @echo vs echo
+ - 
 .. code-block:: 
     
     # Minimal makefile for Sphinx documentation
@@ -21,7 +28,7 @@ Without .PHONY clean, **make clean** 'clean' is up to date.
     SOURCEDIR     = .
     BUILDDIR      = _build
 
-    # Put it first so that "make" without argument is like "make help".
+    # Set default "make" without argument, "make == make help"
     help:
     	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 

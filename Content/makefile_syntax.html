@@ -160,15 +160,23 @@
 <div class="line"><br /></div>
 </div>
 <p>Adding .PHONY to a target will prevent make from confusing the phony target with a file name. In this example, if the file “clean” is created, <strong>make clean</strong> will still be run.
-Without .PHONY clean, <strong>make clean</strong> ‘clean’ is up to date.</p>
+Without .PHONY clean, <strong>make clean</strong>: ‘clean’ is up to date.</p>
 <div class="line-block">
 <div class="line">touch clean</div>
 <div class="line">.PHONY clean</div>
-<div class="line">clean:</div>
-<div class="line-block">
-<div class="line">do something</div>
+<div class="line">clean:
+do something</div>
 </div>
-</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>wildcards: <a href="#id1"><span class="problematic" id="id2">*</span></a>, ?, […]</p></li>
+<li><p>%: which matches any zero or more characters</p></li>
+<li><p>$&#64;: automatic variable that contains the target name.</p></li>
+<li><p>“$(VARIALBE_NAME)”</p></li>
+<li><p>&#64;echo vs echo</p></li>
+<li></li>
+</ul>
+</div></blockquote>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Minimal makefile for Sphinx documentation
 
 # You can set these variables from the command line.
@@ -178,7 +186,7 @@ SPHINXPROJ    = Testproject
 SOURCEDIR     = .
 BUILDDIR      = _build
 
-# Put it first so that &quot;make&quot; without argument is like &quot;make help&quot;.
+# Set default &quot;make&quot; without argument, &quot;make == make help&quot;
 help:
     @$(SPHINXBUILD) -M help &quot;$(SOURCEDIR)&quot; &quot;$(BUILDDIR)&quot; $(SPHINXOPTS) $(O)
 
