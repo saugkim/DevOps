@@ -2,7 +2,7 @@
 | https://github.com/Kitware/CMake/blob/master/Help/dev/documentation.rst
 |
 
-.. code-block:: Makefile
+.. code-block:: python
     :linenos:
    
     # Minimal makefile for Sphinx documentation
