@@ -19,9 +19,11 @@ DevOpss is a collaboration between development, operations and other teams with 
   - Metrics
   - Postmortems/learning reviews
     
-3. Culture of Experimentation
-
-
+3. Culture of Experimentation: continual experimentation and learning failure
+  - allocating time for improvement of daily work
+  - rewards for taking risks
+  - introduce fault into system to increase resilience
+  
 4. Principle of Kaizen
 
 
