@@ -1,6 +1,8 @@
 $(VARIABLE_NAME)
 *****************
-call variable, variable is only string
+| VARIABLE = sphinx-build 
+| use like this $(VARIABLE)
+| call variable, Makefile variable is only string
 
 @ 
 **
