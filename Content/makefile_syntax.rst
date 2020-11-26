@@ -23,9 +23,19 @@ Adding .PHONY to a target will prevent make from confusing the phony target with
             do something
 
 
-$@
-***
-automatic variable that contains the target name.
+$@: $<
+**********
+automatic variable *$@* matches the target name *$<* matches the prerequite name
+
+.. code-block::
+
+      target: prerequisite
+            @echo "Call gcc to generate $@ from $<"
+      prerequisite:
+            @echo "Do something"
+      # Do something
+      # Call gcc to generate target from prerequisite
+      
 
 $(0) 
 *****
