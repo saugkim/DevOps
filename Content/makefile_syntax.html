@@ -164,7 +164,17 @@
 </div>
 <div class="section" id="echo">
 <h1>&#64;echo<a class="headerlink" href="#echo" title="Permalink to this headline">¶</a></h1>
-<p>what is this &#64;?</p>
+<p>what is this &#64;? silence</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">target</span><span class="p">:</span> <span class="c1"># with @</span>
+      <span class="nd">@echo</span> <span class="s2">&quot;Call gcc to generate $@&quot;</span>
+<span class="o">--&gt;</span> <span class="n">Call</span> <span class="n">gcc</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">target</span>
+
+<span class="n">target</span><span class="p">:</span>  <span class="c1"># without @</span>
+      <span class="n">echo</span> <span class="s2">&quot;Call gcc to generate $@&quot;</span>
+<span class="o">--&gt;</span> <span class="n">echo</span> <span class="s2">&quot;Call gcc to generate target&quot;</span>
+<span class="o">--&gt;</span> <span class="n">Call</span> <span class="n">gcc</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">target</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="phony">
 <h1>.PHONY<a class="headerlink" href="#phony" title="Permalink to this headline">¶</a></h1>
@@ -200,11 +210,13 @@
 <h1>sphinx build command<a class="headerlink" href="#sphinx-build-command" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line"><em>sphinx-build -b buildername source_directory build_directory [filenames…]</em></div>
-<div class="line">default builder is html (lots more)</div>
+<div class="line">default builder is html</div>
 <div class="line">-M: alternative to -b. Uses the Sphinx make_mode module. default html</div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>%: Makefile
         @$(SPHINXBUILD) -M $@ &quot;$(SOURCEDIR)&quot; &quot;$(BUILDDIR)&quot; $(SPHINXOPTS) $(O)
+html: Makefile
+      @$(SPHINXBUILD) -M html &quot;$(SOURCEDIR)&quot; &quot;$(BUILDDIR)&quot; $(SPHINXOPTS) $(O)
 </pre></div>
 </div>
 <ul class="simple">
