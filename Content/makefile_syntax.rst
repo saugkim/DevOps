@@ -29,8 +29,11 @@ automatic variable that contains the target name.
 
 $(0) 
 *****
-| in sphinx, $(0) is shortcut for $(SPHINXOPTS).
-| sphinx-build -M buildername source_directory build_directory 
+in sphinx, $(0) is shortcut for $(SPHINXOPTS).
+
+sphinx build command
+*********************
+*sphinx-build -M buildername source_directory build_directory*
 
 .. code-block::
       
