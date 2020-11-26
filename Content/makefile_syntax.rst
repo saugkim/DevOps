@@ -6,7 +6,19 @@ $(VARIABLE_NAME)
 
 @echo 
 ******
-what is this @?
+what is this @? silence
+
+.. code-block::
+
+      target: # with @
+            @echo "Call gcc to generate $@"
+      --> Call gcc to generate target
+      
+      target:  # without @ 
+            echo "Call gcc to generate $@"
+      --> echo "Call gcc to generate target"
+      --> Call gcc to generate target
+
 
 .PHONY 
 *******
@@ -44,13 +56,15 @@ in sphinx, $(0) is shortcut for $(SPHINXOPTS).
 sphinx build command
 *********************
 | *sphinx-build -b buildername source_directory build_directory [filenames...]*
-| default builder is html (lots more)
+| default builder is html
 | -M: alternative to -b. Uses the Sphinx make_mode module. default html
 
 .. code-block::
       
       %: Makefile
     	      @$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+      html: Makefile
+            @$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 
 - wildcards: *, ?, [...]
