@@ -4,9 +4,9 @@ $(VARIABLE_NAME)
 | use like this $(VARIABLE)
 | call variable, Makefile variable is only string
 
-@ 
-**
-what is this?
+@echo 
+******
+what is this @?
 
 .PHONY 
 *******
