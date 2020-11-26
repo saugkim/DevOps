@@ -3,12 +3,12 @@
 |
 
 Adding .PHONY to a target will prevent make from confusing the phony target with a file name. In this example, if the file “clean” is created, **make clean** will still be run. 
-Without .PHONY clean, **make clean**: 'clean' is up to date.
+| Without .PHONY clean, **make clean**: 'clean' is up to date.
 
 | touch clean
 | .PHONY clean
 | clean: 
-      do something
+|        do something
       
       
  - wildcards: *, ?, [...]
