@@ -28,9 +28,12 @@ $@
 automatic variable that contains the target name.
 
 $(0) 
-****
-in sphinx, $(0) is $(SPHINXOPTS)
+*****
+in sphinx, $(0) is shortcut for $(SPHINXOPTS).
 
+.. code-block::
+      %: Makefile
+    	      @$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 - wildcards: *, ?, [...]
 - %: which matches any zero or more characters
