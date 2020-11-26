@@ -2,9 +2,8 @@
 | https://github.com/Kitware/CMake/blob/master/Help/dev/documentation.rst
 |
 
-.. code-block:: python
-    :linenos:
-   
+.. code-block:: 
+    
     # Minimal makefile for Sphinx documentation
 
     # You can set these variables from the command line.
