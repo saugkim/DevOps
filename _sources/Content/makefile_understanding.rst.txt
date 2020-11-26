@@ -94,7 +94,6 @@ Makefile sample (which is used for this DevOps project)
     # $(O) is meant as a shortcut for $(SPHINXOPTS).
     %: Makefile
     	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
- 
+
+
 | https://makefiletutorial.com/
-| https://github.com/Kitware/CMake/blob/master/Help/dev/documentation.rst
-|
