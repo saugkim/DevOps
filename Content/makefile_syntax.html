@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; DevOps  documentation</title>
+  <title>$(VARIABLE_NAME) &mdash; DevOps  documentation</title>
   
 
   
@@ -135,7 +135,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>$(VARIABLE_NAME)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,26 +154,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>.PHONY</p>
+  <div class="section" id="variable-name">
+<h1>$(VARIABLE_NAME)<a class="headerlink" href="#variable-name" title="Permalink to this headline">¶</a></h1>
+<p>call variable, variable is only string</p>
+</div>
+<div class="section" id="id1">
+<h1>&#64;<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>what is this?</p>
+</div>
+<div class="section" id="phony">
+<h1>.PHONY<a class="headerlink" href="#phony" title="Permalink to this headline">¶</a></h1>
 <p>Adding .PHONY to a target will prevent make from confusing the phony target with a file name. In this example, if the file “clean” is created, <strong>make clean</strong> will still be run.</p>
-<p>Without <em>.PHONY clean</em>, $ make clean: ‘clean’ is up to date.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     touch clean
-     .PHONY clean
-     clean:
-           do something
-
-
-- wildcards: *, ?, [...]
-- %: which matches any zero or more characters
-- $@: automatic variable that contains the target name.
-- &quot;$(VARIALBE_NAME)&quot;
-- @echo vs echo
--
+<p>Without <em>.PHONY clean</em>, $ make clean: ‘clean’ is up to date not <em>do something</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">touch</span> <span class="n">clean</span>
+<span class="o">.</span><span class="n">PHONY</span> <span class="n">clean</span>
+<span class="n">clean</span><span class="p">:</span>
+      <span class="n">do</span> <span class="n">something</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="id2">
+<h1>$&#64;<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>automatic variable that contains the target name.</p>
+</div>
+<div class="section" id="id3">
+<h1>$(0)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<p>in sphinx, $(0) is $(SPHINXOPTS)</p>
+<ul class="simple">
+<li><p>wildcards: <a href="#id4"><span class="problematic" id="id5">*</span></a>, ?, […]</p></li>
+<li><p>%: which matches any zero or more characters</p></li>
+<li><p>$&#64;: automatic variable that contains the target name.</p></li>
+<li><p>“$(VARIALBE_NAME)”</p></li>
+<li><p>&#64;echo vs echo</p></li>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Minimal makefile for Sphinx documentation
-
-# You can set these variables from the command line.
+# You can set these VARIABLES from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = Testproject
@@ -197,6 +212,7 @@ help:
 <div class="line"><a class="reference external" href="https://makefiletutorial.com/">https://makefiletutorial.com/</a></div>
 <div class="line"><a class="reference external" href="https://github.com/Kitware/CMake/blob/master/Help/dev/documentation.rst">https://github.com/Kitware/CMake/blob/master/Help/dev/documentation.rst</a></div>
 <div class="line"><br /></div>
+</div>
 </div>
 
 
