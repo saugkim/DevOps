@@ -2,6 +2,14 @@
 | https://github.com/Kitware/CMake/blob/master/Help/dev/documentation.rst
 |
 
+Adding .PHONY to a target will prevent make from confusing the phony target with a file name. In this example, if the file “clean” is created, **make clean** will still be run. 
+Without .PHONY clean, **make clean** 'clean' is up to date.
+
+| touch clean
+| .PHONY clean
+| clean: 
+|    do something
+
 .. code-block:: 
     
     # Minimal makefile for Sphinx documentation
@@ -20,7 +28,8 @@
     .PHONY: help Makefile
 
     # Catch-all target: route all unknown targets to Sphinx using the new
-    # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-    %: Makefilw
+    # "make mode" option.  
+    # $(O) is meant as a shortcut for $(SPHINXOPTS).
+    %: Makefile
     	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
  
