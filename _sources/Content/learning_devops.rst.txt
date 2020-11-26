@@ -46,6 +46,7 @@ CAMS model
 Cargo culting? no!!
 
 | **Automation**
+- why automate? expensive, not scalable, more errors,  
 - 
 
 | **Measurement**
