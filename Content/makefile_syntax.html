@@ -156,8 +156,7 @@
             
   <p>.PHONY</p>
 <p>Adding .PHONY to a target will prevent make from confusing the phony target with a file name. In this example, if the file “clean” is created, <strong>make clean</strong> will still be run.</p>
-<p>Without .PHONY clean, <strong>make clean</strong>: ‘clean’ is up to date.
-.. code-block:</p>
+<p>Without <em>.PHONY clean</em>, $ make clean: ‘clean’ is up to date.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     touch clean
      .PHONY clean
      clean:
