@@ -3,7 +3,6 @@
 |
 
 .. code-block:: Makefile
-   :linenos:
    
       Minimal makefile for Sphinx documentation
 
