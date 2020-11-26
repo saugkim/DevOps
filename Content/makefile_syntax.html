@@ -198,7 +198,11 @@
 </div>
 <div class="section" id="sphinx-build-command">
 <h1>sphinx build command<a class="headerlink" href="#sphinx-build-command" title="Permalink to this headline">¶</a></h1>
-<p><em>sphinx-build -M buildername source_directory build_directory</em></p>
+<div class="line-block">
+<div class="line"><em>sphinx-build -b buildername source_directory build_directory [filenames…]</em></div>
+<div class="line">default builder is html (lots more)</div>
+<div class="line">-M: alternative to -b. Uses the Sphinx make_mode module. default html</div>
+</div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>%: Makefile
         @$(SPHINXBUILD) -M $@ &quot;$(SOURCEDIR)&quot; &quot;$(BUILDDIR)&quot; $(SPHINXOPTS) $(O)
 </pre></div>
