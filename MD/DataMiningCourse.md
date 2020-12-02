@@ -2,52 +2,52 @@
 
 1. Introduction of data mining
 
-Understanding of the process data cleaning 
+Understanding of the process data cleaning  
 data cleaning is an essential step
 
 
-2. Second part
-Why Pre-processing?
+2. Second part  
+Why Pre-processing?  
 	real world data can be incomplete, noisy, inconsistent(different format, name, lab), biased abnormal...
 	
 	preparing the data, preparing the miner
 		pprepare the data -> model is build right
 		the miner -> right model is build quality of data
 	
-why data be incomplete?
-	attribute of interest are not available
-	data was not considered important at the time of transactions, -not recorded
-	data were not recorded because of misunderstanding or malfunctions
-	data deleted later to save space
-	missing/unknown values for observations
+why data be incomplete?  
+	attribute of interest are not available  
+	data was not considered important at the time of transactions, -not recorded  
+	data were not recorded because of misunderstanding or malfunctions  
+	data deleted later to save space  
+	missing/unknown values for observations  
 
-Why can data be noisy?
-	faulty instruments
-	human error
-	transmission error....
-	techincal limitation
-	inconsistencies in naming conventions or data codes
-	duplicates 
+Why can data be noisy?  
+	faulty instruments  
+	human error  
+	transmission error....  
+	techincal limitation  
+	inconsistencies in naming conventions or data codes  
+	duplicates  
 
-high quality data?
-	accuracy and precision
-		no error, more money better! invest for accuracy
-	legitimacy and validity
-	reliability and consistency
-	timeliness and relevance
-	completeness and comprehensiveness
-	availability and accessibility
-	granularity and uniqueness
+high quality data?  
+	accuracy and precision  
+		no error, more money better! invest for accuracy  
+	legitimacy and validity  
+	reliability and consistency  
+	timeliness and relevance  
+	completeness and comprehensiveness  
+	availability and accessibility  
+	granularity and uniqueness  
 
-Tasks in data pre-processing
-	data cleaning
-	data integration
-	data transformation
-	data reduction
-	data discretisation
-
-Data cleaning
-	ignore observation with missing values OR fill...  
+Tasks in data pre-processing  
+	data cleaning  
+	data integration  
+	data transformation  
+	data reduction  
+	data discretisation  
+  
+Data cleaning  
+	ignore observation with missing values OR fill...   
 	fill in missing values with imputation(by mean? )  
 	identify outliers and smooth out noisy data  
 	correct inconsistent data  
@@ -56,20 +56,18 @@ Data transformation
 	normalization/rescale  
 	aggregation  
 	generalization  
-	variable construcion/feature extraction (replace or construct from existing attributes)
+	variable construcion/feature extraction (replace or construct from existing attributes)  
 
-Data reduction  
-	reducing the number of variables  
-		aggregation  
-		
-	reducint the number of variable values  
-		binning (by grouping them into intervals)  
-		clustering, grouping values in clusters  
-		aggregation or generalization  
-	reducing the number of observations  
-		sampling  
-
-
+Data reduction    
+	reducing the number of variables   
+		aggregation   
+	reducing the number of variable values   
+		binning (by grouping them into intervals)      
+		clustering, grouping values in clusters   
+		aggregation or generalization   
+	reducing the number of observations   
+		sampling   
+  
 ### Chapter 2
 **Ethical Considerations in Data Mining**
 	Data Ethics  
